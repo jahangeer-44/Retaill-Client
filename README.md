@@ -7,7 +7,7 @@ This project implements an end-to-end **Retail Sales Data Warehouse** using **AW
 The solution simulates a real-world enterprise retail pipeline where source CSV files arrive periodically and are processed through multiple layers:
 
 ```text
-S3 Landing Zone → Bronze (Raw) → Silver (Clean) → Gold (Warehouse) → Archive
+S3 Landing Zone → Archive → Bronze (Raw) → Silver (Clean) → Gold (Warehouse) → validation
 ```
 
 ---
@@ -227,7 +227,7 @@ New File → Landing Folder
 ## Databricks Workflow:
 
 ```text
-Bronze → Silver → Gold → Fact → Archive → Validation
+Archive → Bronze → Silver → Gold → Fact →  Validation
 ```
 
 ## Features:
